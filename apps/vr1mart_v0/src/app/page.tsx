@@ -1,9 +1,17 @@
 import Image from "next/image";
-
+import Hero from "./components/home/Hero";
+import WhyUs from "./components/home/WhyUs";
+import CategoryGrid from "./components/home/Category";
+import FreshSafeSection from "./components/home/FreshSafeSection";
+import FranchiseCTA from "./components/home/FranchiseCta";
 export default function Home() {
 	return (
-		<div className=" text-7xl font-bold ">
-			<h1 className=" text-green-500">Welcome to VR1Mart</h1>
-		</div>
+		<>
+			<Hero />
+			<WhyUs />
+			<CategoryGrid />
+			<FreshSafeSection />
+			<FranchiseCTA />
+		</>
 	);
 }
