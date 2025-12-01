@@ -41,7 +41,7 @@ export default function VrMartPromise() {
 						<h2 className="mt-2 text-[1.3rem] font-extrabold text-black md:text-[1.6rem]">
 							Fresh. Fast. Safe. Every Order.
 						</h2>
-						<p className="mt-1 max-w-xl text-sm text- md:text-black.95rem]">
+						<p className="mt-1 max-w-xl text-sm text-gray-700 md:text-black md:text-[0.95rem]">
 							Designed like your neighbourhood mart, powered by modern
 							convenience.
 						</p>

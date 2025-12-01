@@ -38,13 +38,13 @@ const USP_DATA = [
 		title: "Fast Delivery in Your Locality",
 		desc: "Orders delivered within hours.",
 		icon: Truck,
-		bg: "bg-[#FFF4D0]", // hero-matching base
+		bg: "bg-[#FFF4D0]",
 	},
 	{
 		title: "Affordable Prices Everyday",
 		desc: "Premium products at transparent pricing.",
 		icon: ShoppingBag,
-		bg: "bg-[#FFE1EA]", // subtle rose accent
+		bg: "bg-[#FFEFC8]", 
 	},
 	{
 		title: "Wide Range of Essentials",
