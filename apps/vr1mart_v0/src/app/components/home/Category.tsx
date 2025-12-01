@@ -13,7 +13,7 @@ const CATEGORIES = [
 		price: "Starting at ₹19",
 		badge: "VR Pick",
 		img: "https://res.cloudinary.com/dgulr1hgd/image/upload/v1764400272/vegetables-that-are-actually-fruit-66ccedf92ec3a.jpg_g2kvjp.jpg",
-		gradient: "from-emerald-500/90 to-lime-500/90",
+		gradient: "from-[#F9C80B]/90 to-[#FF6A00]/90",
 	},
 	{
 		key: "fruits",
@@ -22,7 +22,7 @@ const CATEGORIES = [
 		price: "Starting at ₹29",
 		badge: "Top Seller",
 		img: "https://res.cloudinary.com/dgulr1hgd/image/upload/v1764400314/pngtree-beautiful-various-fruits-item-and-healthy-clipart-png-image_16788969_dcamjq.png",
-		gradient: "from-orange-400/90 to-amber-500/90",
+		gradient: "from-[#FFFF41]/90 to-[#F9C80B]/90",
 	},
 	{
 		key: "dairy",
@@ -31,7 +31,7 @@ const CATEGORIES = [
 		price: "Starting at ₹49",
 		badge: "Fresh Daily",
 		img: "https://res.cloudinary.com/dgulr1hgd/image/upload/v1764400396/shutterstock_775708189_scthsr.jpg",
-		gradient: "from-sky-400/90 to-indigo-500/90",
+		gradient: "from-[#F9C80B]/90 to-[#FFEFC8]/90",
 	},
 	{
 		key: "snacks",
@@ -40,7 +40,7 @@ const CATEGORIES = [
 		price: "Starting at ₹10",
 		badge: "Party Time",
 		img: "https://res.cloudinary.com/dgulr1hgd/image/upload/v1764400441/assorted-snacks-beverages-displayed-table-perfect-food-beverage-concepts_153912-132267_v7gr7o.jpg",
-		gradient: "from-rose-400/90 to-fuchsia-500/90",
+		gradient: "from-[#FF6A00]/90 to-[#F9C80B]/90",
 	},
 	{
 		key: "staples",
@@ -49,7 +49,7 @@ const CATEGORIES = [
 		price: "Starting at ₹59",
 		badge: "Value Pack",
 		img: "https://res.cloudinary.com/dgulr1hgd/image/upload/v1764400525/Essential-Asian-Pantry-Staples-5119-300x300_kzdgiu.jpg",
-		gradient: "from-amber-500/90 to-yellow-400/90",
+		gradient: "from-[#F9C80B]/90 to-[#A05A2C]/90",
 	},
 	{
 		key: "cleaning",
@@ -58,7 +58,7 @@ const CATEGORIES = [
 		price: "Starting at ₹35",
 		badge: "Daily Use",
 		img: "https://res.cloudinary.com/dgulr1hgd/image/upload/v1764400925/guide-to-household-cleaning-supplies-getty-0423-2000-ffd247a66ef847c78f12379bbd080f4b_sdnd1i.jpg",
-		gradient: "from-cyan-400/90 to-sky-500/90",
+		gradient: "from-[#FFEFC8]/90 to-[#FFF4D0]/90",
 	},
 	{
 		key: "personal",
@@ -67,7 +67,7 @@ const CATEGORIES = [
 		price: "Starting at ₹25",
 		badge: "Everyday Care",
 		img: "https://res.cloudinary.com/dgulr1hgd/image/upload/v1764401307/Importance_of_Personal_Care_Products_480x480_g2i3qd.jpg",
-		gradient: "from-violet-500/90 to-purple-500/90",
+		gradient: "from-[#F9C80B]/90 to-[#FFE1A8]/90",
 	},
 	{
 		key: "baby",
@@ -76,7 +76,7 @@ const CATEGORIES = [
 		price: "Starting at ₹49",
 		badge: "Gentle Choice",
 		img: "https://res.cloudinary.com/dgulr1hgd/image/upload/v1764401386/Freebies-image_xaoqmw.jpg",
-		gradient: "from-pink-400/90 to-rose-500/90",
+		gradient: "from-[#FFE1A8]/90 to-[#F9C80B]/90",
 	},
 ];
 
@@ -90,122 +90,128 @@ export default function Category() {
 	};
 
 	return (
-		<section className="mx-auto max-w-6xl px-4 pb-16 pt-10 md:pt-12">
-			{/* Header row */}
-			<div className="flex items-center justify-between gap-3">
-				<div>
-					<div className="inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-emerald-700">
-						<Sparkles className="h-3.5 w-3.5" />
-						<span>Explore by category</span>
+		<section className="w-full bg-[#FFFCF2]">
+			<div className="mx-auto max-w-6xl px-4 pb-16 pt-10 md:px-6 md:pt-12">
+				{/* Header row */}
+				<div className="flex items-center justify-between gap-3">
+					<div>
+						<p className="inline-flex items-center gap-2 rounded-full bg-[#F9C80E] px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-gray-900 shadow-sm shadow-[#F5A623]/40">
+							<Sparkles className="h-3.5 w-3.5 text-[#FF6A00]" />
+							Explore by category
+						</p>
+
+						<h2 className="mt-2 text-lg font-extrabold text-black sm:text-xl md:text-2xl">
+							Shop by Categories
+						</h2>
+						<p className="text-xs text-black sm:text-sm">
+							Swipe through{" "}
+							<span className="font-semibold text-[#309740]">
+								VR<span className="text-amber-900">1</span>MART
+							</span>{" "}
+							favourites – everything your home needs, in one place.
+						</p>
 					</div>
-					<h2 className="mt-2 text-lg font-bold text-emerald-950 sm:text-xl md:text-2xl">
-						Shop by Categories
-					</h2>
-					<p className="text-xs text-emerald-900/70 sm:text-sm">
-						Swipe through{" "}
-						<span className="font-semibold text-emerald-700">VR1MART</span>{" "}
-						favourites – everything your home needs, in one place.
-					</p>
+
+					<div className="hidden items-center gap-2 md:flex">
+						<button
+							onClick={() => scroll("left")}
+							className="flex h-9 w-9 items-center justify-center rounded-full border border-orange-400 bg-[#FFFDF6]/90 text-orange-600 shadow-sm transition hover:bg-[#FFEFC8] hover:text-orange-700">
+							<ChevronLeft className="h-4 w-4" />
+						</button>
+						<button
+							onClick={() => scroll("right")}
+							className="flex h-9 w-9 items-center justify-center rounded-full border border-orange-400 bg-[#FFFDF6]/90 text-orange-600 shadow-sm transition hover:bg-[#FFEFC8] hover:text-orange-700">
+							<ChevronRight className="h-4 w-4" />
+						</button>
+					</div>
 				</div>
 
-				<div className="hidden items-center gap-2 md:flex">
-					<button
-						onClick={() => scroll("left")}
-						className="flex h-9 w-9 items-center justify-center rounded-full border border-emerald-100 bg-white/80 text-emerald-700 shadow-sm transition hover:bg-emerald-50 hover:text-emerald-800">
-						<ChevronLeft className="h-4 w-4" />
-					</button>
-					<button
-						onClick={() => scroll("right")}
-						className="flex h-9 w-9 items-center justify-center rounded-full border border-emerald-100 bg-white/80 text-emerald-700 shadow-sm transition hover:bg-emerald-50 hover:text-emerald-800">
-						<ChevronRight className="h-4 w-4" />
-					</button>
-				</div>
-			</div>
+				{/* CAROUSEL WRAPPER */}
+				<div className="relative mt-6 rounded-3xl bg-linear-to-r from-[#FFF4D0] via-[#FFFDF6] to-[#FFF4D0] px-2 py-4">
+					{/* side fade */}
+					<div className="pointer-events-none absolute left-2 top-4 h-[85%] w-10 rounded-r-3xl bg-linear-to-r from-[#FFF4D0] to-transparent" />
+					<div className="pointer-events-none absolute right-2 top-4 h-[85%] w-10 rounded-l-3xl bg-linear-to-l from-[#FFF4D0] to-transparent" />
 
-			{/* CAROUSEL WRAPPER */}
-			<div className="relative mt-6 rounded-3xl bg-linear-to-r from-emerald-50 via-white to-emerald-50/60 px-2 py-4">
-				{/* side fade */}
-				<div className="pointer-events-none absolute left-2 top-4 h-[85%] w-10 rounded-r-3xl bg-linear-to-r from-emerald-50 to-transparent" />
-				<div className="pointer-events-none absolute right-2 top-4 h-[85%] w-10 rounded-l-3xl bg-linear-to-l from-emerald-50 to-transparent" />
-
-				<div
-					ref={trackRef}
-					className="
-						flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 pt-1
-						scroll-smooth
-						scrollbar-thin scrollbar-thumb-emerald-500 scrollbar-track-emerald-100/60
-					">
-					{CATEGORIES.map((cat, idx) => (
-						<motion.button
-							key={cat.key}
-							whileHover={{ y: -8, scale: 1.04, rotate: -1.2 }}
-							whileTap={{ scale: 0.97 }}
-							initial={{ opacity: 0, y: 18 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.35, delay: idx * 0.04 }}
-							className="group relative min-w-[190px] max-w-[220px] snap-start rounded-3xl bg-transparent p-0.5 text-left">
-							{/* gradient frame */}
-							<div
-								className={`absolute inset-0 rounded-3xl bg-linear-to-br ${cat.gradient} opacity-80 blur-[0.5px] group-hover:opacity-100 group-hover:blur-[1px]`}
-							/>
-							<div className="relative z-10 flex h-full flex-col rounded-3xl bg-white shadow-[0_16px_40px_rgba(16,185,129,0.18)] group-hover:shadow-[0_20px_55px_rgba(16,185,129,0.25)] transition-shadow">
-								{/* image area */}
-								<div className="relative h-28 overflow-hidden rounded-t-3xl">
-									<Image
-										src={cat.img}
-										alt={cat.title}
-										fill
-										className="object-cover transition-transform duration-500 group-hover:scale-110"
-									/>
-									<div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/35 via-black/5 to-transparent" />
-									<span className="absolute bottom-2 left-2 rounded-full bg-emerald-900/85 px-2.5 py-[3px] text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-emerald-50">
-										{cat.tag}
-									</span>
-									{cat.badge && (
-										<span className="absolute right-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-emerald-700 shadow-sm">
-											{cat.badge}
+					<div
+						ref={trackRef}
+						className="
+							flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 pt-1
+							scroll-smooth
+							scrollbar-thin scrollbar-thumb-[#F9C80B] scrollbar-track-[#FFEFC8]/70
+						">
+						{CATEGORIES.map((cat, idx) => (
+							<motion.button
+								key={cat.key}
+								whileHover={{ y: -8, scale: 1.04, rotate: -1.2 }}
+								whileTap={{ scale: 0.97 }}
+								initial={{ opacity: 0, y: 18 }}
+								animate={{ opacity: 1, y: 0 }}
+								transition={{ duration: 0.35, delay: idx * 0.04 }}
+								className="group relative min-w-[180px] max-w-[220px] snap-start rounded-3xl bg-transparent p-0.5 text-left">
+								{/* gradient frame */}
+								<div
+									className={`absolute inset-0 rounded-3xl bg-linear-to-br ${cat.gradient} opacity-80 blur-[0.5px] group-hover:opacity-100 group-hover:blur-[1px]`}
+								/>
+								<div className="relative z-10 flex h-full flex-col rounded-3xl bg-white shadow-[0_16px_40px_rgba(249,200,11,0.22)] transition-shadow group-hover:shadow-[0_20px_55px_rgba(249,200,11,0.30)]">
+									{/* image area */}
+									<div className="relative h-28 overflow-hidden rounded-t-3xl">
+										<Image
+											src={cat.img}
+											alt={cat.title}
+											fill
+											className="object-cover transition-transform duration-500 group-hover:scale-110"
+										/>
+										{/* warm mango overlay */}
+										<div className="pointer-events-none absolute inset-0 bg-linear-to-t from-[#F9C80B]/30 via-transparent to-transparent" />
+										<span className="absolute bottom-2 left-2 rounded-full bg-orange-600/90 px-2.5 py-[3px] text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-[#FFEFC8]">
+											{cat.tag}
 										</span>
-									)}
-								</div>
-
-								{/* text area */}
-								<div className="flex flex-1 flex-col justify-between gap-2 px-3.5 pb-3 pt-2.5">
-									<div>
-										<h3 className="text-[0.95rem] font-semibold text-slate-900">
-											{cat.title}
-										</h3>
-										<p className="mt-1 text-[0.7rem] font-medium text-emerald-600">
-											{cat.price}
-										</p>
+										{cat.badge && (
+											<span className="absolute right-2 top-2 rounded-full bg-white/95 px-2 py-0.5 text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-orange-600 shadow-sm">
+												{cat.badge}
+											</span>
+										)}
 									</div>
 
-									<div className="flex items-center justify-between text-[0.65rem]">
-										<span className="rounded-full bg-emerald-50 px-2 py-[3px] font-medium text-emerald-700 group-hover:bg-emerald-100">
-											View items
-										</span>
-										<span className="flex items-center gap-1 text-emerald-500/90 group-hover:text-emerald-600">
-											<span className="h-1.5 w-1.5 rounded-full bg-emerald-500/90 group-hover:bg-emerald-600" />
-											<span>In stock</span>
-										</span>
+									{/* text area */}
+									<div className="flex flex-1 flex-col justify-between gap-2 px-3.5 pb-3 pt-2.5">
+										<div>
+											<h3 className="text-[0.95rem] font-semibold text-black">
+												{cat.title}
+											</h3>
+											<p className="mt-1 text-[0.7rem] font-medium text-orange-600">
+												{cat.price}
+											</p>
+										</div>
+
+										<div className="flex items-center justify-between text-[0.65rem]">
+											<span className="rounded-full bg-[#FFF4D0] px-2 py-[3px] font-medium text-orange-600 transition-colors group-hover:bg-[#FFEFC8]">
+												View items
+											</span>
+											<span className="flex items-center gap-1 text-[#FF6A00]/90 group-hover:text-[#A05A2C]">
+												<span className="h-1.5 w-1.5 rounded-full bg-[#FF6A00]/90 group-hover:bg-[#A05A2C]" />
+												<span>In stock</span>
+											</span>
+										</div>
 									</div>
 								</div>
-							</div>
-						</motion.button>
-					))}
-				</div>
+							</motion.button>
+						))}
+					</div>
 
-				{/* mobile arrows */}
-				<div className="mt-3 flex items-center justify-center gap-3 md:hidden">
-					<button
-						onClick={() => scroll("left")}
-						className="flex h-8 w-8 items-center justify-center rounded-full border border-emerald-200 bg-white/95 text-emerald-700 shadow-sm">
-						<ChevronLeft className="h-4 w-4" />
-					</button>
-					<button
-						onClick={() => scroll("right")}
-						className="flex h-8 w-8 items-center justify-center rounded-full border border-emerald-200 bg-white/95 text-emerald-700 shadow-sm">
-						<ChevronRight className="h-4 w-4" />
-					</button>
+					{/* mobile arrows */}
+					<div className="mt-3 flex items-center justify-center gap-3 md:hidden">
+						<button
+							onClick={() => scroll("left")}
+							className="flex h-8 w-8 items-center justify-center rounded-full border border-orange-400 bg-[#FFFDF6]/95 text-orange-600 shadow-sm">
+							<ChevronLeft className="h-4 w-4" />
+						</button>
+						<button
+							onClick={() => scroll("right")}
+							className="flex h-8 w-8 items-center justify-center rounded-full border border-orange-400 bg-[#FFFDF6]/95 text-orange-600 shadow-sm">
+							<ChevronRight className="h-4 w-4" />
+						</button>
+					</div>
 				</div>
 			</div>
 		</section>

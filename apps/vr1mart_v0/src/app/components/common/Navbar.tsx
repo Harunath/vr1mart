@@ -34,52 +34,52 @@ export default function Navbar() {
 
 	return (
 		<header className="fixed inset-x-0 top-0 z-50">
+			{/* NAVBAR */}
 			<motion.nav
 				initial={{ y: -40, opacity: 0 }}
 				animate={{ y: 0, opacity: 1 }}
-				transition={{ duration: 0.35, ease: "easeOut" }}
-				className="w-full bg-transparent/80 backdrop-blur-md border-b border-white/10">
-				{/* NAV HEIGHT UPDATED HERE */}
-				<div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 md:px-6 md:py-5">
-					{/* LEFT : Logo + tagline */}
+				transition={{ duration: 0.4, ease: "easeOut" }}
+				className="
+					w-full
+					bg-white/60
+					backdrop-filter 
+					text-[#1F1300]
+					border-b border-[#1F1300]/10
+					backdrop-blur-sm
+				">
+				<div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3.5 md:px-6 md:py-4">
+					{/* LEFT SECTION */}
 					<div className="flex items-center gap-3">
-						<Link
-							href="/"
-							className="flex items-center gap-2"
-							aria-label="Go to VR1MART home">
-							{/* LOGO SIZE UPDATED HERE */}
-							<div className="relative h-16 w-[150px] md:h-16 md:w-[210px]">
-								<div className="absolute inset-0 rounded-lg bg-white/30 blur-[18px]" />
-
+						<Link href="/" className="flex items-center gap-2">
+							<div className="relative h-16 w-[200px] md:h-20 md:w-[260px] -ml-3">
 								<Image
 									src="https://res.cloudinary.com/diaoy3wzi/image/upload/v1764315364/vr1mart-logo_sample1_1_lxyspi.png"
 									alt="VR1MART Logo"
 									fill
-									className="relative object-contain"
+									className="object-contain"
 									priority
 								/>
 							</div>
 						</Link>
 
+						{/* Motto */}
 						<div className="hidden flex-col leading-tight text-xs md:flex">
-							{/* badge line */}
-							<span className="inline-flex items-center gap-1 rounded-full bg-white px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-emerald-900 shadow-sm shadow-emerald-900/40">
-								<Leaf className="h-3 w-3 text-emerald-900" />
-								<span>From Farmers to Shelf</span>
+							<span className="inline-flex items-center gap-1 rounded-full bg-[#FFF9C2] px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-orange-400 shadow-sm">
+								<Leaf className="h-3 w-3 text-green-600" />
+								From Farmers to Shelf
 							</span>
 
-							{/* pattern line */}
-							<span className="mt-1 inline-flex items-center gap-2 text-[0.75rem] text-[#309740]">
+							<span className="mt-1 inline-flex items-center gap-2 text-[0.75rem] text-gray-900 font-medium">
 								<span>Fresh</span>
-								<span className="h-1 w-1 rounded-full bg-emerald-200/80" />
+								<span className="h-1 w-1 rounded-full bg-orange-400" />
 								<span>Fast</span>
-								<span className="h-1 w-1 rounded-full bg-emerald-200/80" />
+								<span className="h-1 w-1 rounded-full bg-orange-400" />
 								<span>Affordable</span>
 							</span>
 						</div>
 					</div>
 
-					{/* RIGHT : Desktop nav */}
+					{/* DESKTOP NAV */}
 					<div className="hidden items-center gap-5 md:flex">
 						<div className="flex items-center gap-3">
 							{NAV_ITEMS.map((item) => {
@@ -87,49 +87,44 @@ export default function Navbar() {
 								const isSolid = item.variant === "solid";
 
 								return (
-									<motion.div
+									<Link
 										key={item.href}
-										whileHover={{ y: -1, scale: 1.02 }}
-										transition={{ duration: 0.15 }}>
-										<Link
-											href={item.href}
-											className={[
-												"group inline-flex items-center gap-2 rounded-full text-xs font-semibold transition-colors border",
-												isSolid
-													? "border-emerald-300/80 bg-white px-4 py-2 text-emerald-900 shadow-sm shadow-emerald-900/40 hover:bg-emerald-400"
-													: "border-emerald-200/70 bg-white px-4 py-2 text-emerald-900 hover:border-emerald-100 hover:bg-emerald-400",
-											].join(" ")}>
-											<Icon className="h-4 w-4" />
-											<span>{item.label}</span>
-											{isSolid && (
-												<span className="rounded-full bg-emerald-950/70 px-2 py-2 text-[0.6rem] font-semibold uppercase tracking-[0.16em] text-emerald-100">
-													Franchise Ready
-												</span>
-											)}
-										</Link>
-									</motion.div>
+										href={item.href}
+										className={[
+											"inline-flex items-center gap-2 rounded-full text-xs font-semibold transition-all",
+											isSolid
+												? "bg-orange-400 text-[#FFEFC8] px-4 py-2 shadow-md hover:bg-orange-600"
+												: "bg-[#FFF6D5] text-orange-400 border border-[#1F1300]/10 px-4 py-2 hover:bg-[#FFE58D]",
+										].join(" ")}>
+										<Icon className="h-4 w-4" />
+										{item.label}
+
+										{isSolid && (
+											<span className="rounded-full bg-[#FFEFC8] text-black px-2 py-0.5 text-[0.6rem] font-semibold uppercase">
+												Franchise
+											</span>
+										)}
+									</Link>
 								);
 							})}
 						</div>
 
-						{/* divider */}
-						<span className="h-5 w-px bg-emerald-100/40" />
+						{/* Divider */}
+						<span className="h-5 w-px bg-gray-900/20" />
 
-						{/* Login */}
+						{/* LOGIN */}
 						<Link
 							href="/auth"
-							className="flex items-center gap-2 rounded-full border border-emerald-100/40 bg-white px-3 py-1.5 text-sm font-medium text-emerald-900 
-	           hover:bg-emerald-400 hover:text-white transition-colors duration-300">
+							className="flex items-center gap-2 rounded-full border border-gray-900/10 bg-[#FFF6D5] px-3 py-1.5 text-sm font-medium text-gray-900 hover:bg-[#FFE58D] transition">
 							<User className="h-4 w-4" />
-							<span>Login</span>
+							Login
 						</Link>
 					</div>
 
-					{/* MOBILE : Menu Toggle */}
+					{/* MOBILE MENU BUTTON */}
 					<button
-						onClick={() => setOpen((prev) => !prev)}
-						className="flex items-center justify-center rounded-full border border-white/35 bg-emerald-900/50 p-1.5 text-emerald-50 shadow-sm md:hidden"
-						aria-label="Toggle navigation menu">
+						onClick={() => setOpen(!open)}
+						className="md:hidden flex items-center justify-center rounded-full border border-[#1F1300]/20 bg-[#FFF6D5]/80 p-1.5 text-[#4A2D00] shadow-sm">
 						{open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
 					</button>
 				</div>
@@ -139,37 +134,33 @@ export default function Navbar() {
 			<AnimatePresence>
 				{open && (
 					<motion.div
-						initial={{ height: 0, opacity: 0, y: -8 }}
-						animate={{ height: "auto", opacity: 1, y: 0 }}
-						exit={{ height: 0, opacity: 0, y: -8 }}
-						transition={{ duration: 0.22, ease: "easeOut" }}
-						className="overflow-hidden border-b border-emerald-100/15 bg-emerald-950/95 text-sm text-emerald-50 shadow-lg">
+						initial={{ height: 0, opacity: 0 }}
+						animate={{ height: "auto", opacity: 1 }}
+						exit={{ height: 0, opacity: 0 }}
+						transition={{ duration: 0.25 }}
+						className="overflow-hidden bg-linear-to-br from-[#FFFF41] via-[#F9C80B] to-[#FF6A00] border-b border-[#1F1300]/10 text-[#4A2D00] shadow">
 						<div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 pb-4 pt-2">
 							{NAV_ITEMS.map((item) => {
 								const Icon = item.icon;
-								const isSolid = item.variant === "solid";
+								const solid = item.variant === "solid";
 
 								return (
 									<Link
 										key={item.href}
-										href={item.href}
 										onClick={() => setOpen(false)}
+										href={item.href}
 										className={[
 											"flex items-center justify-between rounded-xl px-3 py-2.5",
-											isSolid
-												? "bg-emerald-500 text-white hover:bg-emerald-400"
-												: "bg-emerald-900/70 text-emerald-50 hover:bg-emerald-800",
+											solid
+												? "bg-[#1F1300] text-[#FFEFC8]"
+												: "bg-[#FFF6D5] text-[#4A2D00] border border-[#1F1300]/10",
 										].join(" ")}>
 										<span className="flex items-center gap-2">
-											<Icon
-												className={`h-4 w-4 ${
-													isSolid ? "text-white" : "text-emerald-100"
-												}`}
-											/>
-											{item.label}
+											<Icon className="h-4 w-4" /> {item.label}
 										</span>
-										{isSolid && (
-											<span className="rounded-full bg-emerald-950/80 px-2 py-0.5 text-[0.6rem] font-semibold uppercase tracking-[0.16em] text-emerald-100">
+
+										{solid && (
+											<span className="rounded-full bg-[#FFEFC8] text-[#1F1300] px-2 py-0.5 text-[0.6rem] font-semibold uppercase">
 												Franchise
 											</span>
 										)}
@@ -177,24 +168,21 @@ export default function Navbar() {
 								);
 							})}
 
-							{/* Login */}
+							{/* LOGIN MOBILE */}
 							<Link
-								href="/auth"
 								onClick={() => setOpen(false)}
-								className="flex w-full items-center justify-center rounded-xl bg-emerald-900/70 px-3 py-2.5 hover:bg-emerald-800">
-								<span className="flex items-center gap-2">
-									<User className="h-4 w-4 text-emerald-100" />
-									Login
-								</span>
+								href="/auth"
+								className="flex items-center justify-center rounded-xl bg-[#FFF6D5] border border-[#1F1300]/10 px-3 py-2.5 text-[#4A2D00]">
+								<User className="h-4 w-4" /> Login
 							</Link>
 
-							{/* Cart preview */}
-							<div className="mt-1 flex items-center justify-between rounded-xl bg-emerald-900/80 px-3 py-2 text-xs text-emerald-50">
+							{/* CART */}
+							<div className="mt-1 flex items-center justify-between rounded-xl bg-[#FFF6D5] border border-[#1F1300]/10 px-3 py-2 text-xs text-[#4A2D00]">
 								<div className="flex items-center gap-2">
 									<ShoppingBasket className="h-4 w-4" />
-									<span className="font-semibold">Cart</span>
+									Cart
 								</div>
-								<span className="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-500 text-[0.7rem] text-white">
+								<span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#1F1300] text-[0.7rem] text-[#FFEFC8]">
 									0
 								</span>
 							</div>
