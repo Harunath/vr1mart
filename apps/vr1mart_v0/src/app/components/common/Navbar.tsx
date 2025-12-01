@@ -138,7 +138,7 @@ export default function Navbar() {
 						animate={{ height: "auto", opacity: 1 }}
 						exit={{ height: 0, opacity: 0 }}
 						transition={{ duration: 0.25 }}
-						className="overflow-hidden bg-linear-to-br from-[#FFFF41] via-[#F9C80B] to-[#FF6A00] border-b border-[#1F1300]/10 text-[#4A2D00] shadow">
+						className="overflow-hidden bg-linear-to-br from-[#FFFF41] via-[#F9C80B] to-[#FF6A00] border-b border-orange-400 text-orange-400 shadow">
 						<div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 pb-4 pt-2">
 							{NAV_ITEMS.map((item) => {
 								const Icon = item.icon;
@@ -152,15 +152,15 @@ export default function Navbar() {
 										className={[
 											"flex items-center justify-between rounded-xl px-3 py-2.5",
 											solid
-												? "bg-[#1F1300] text-[#FFEFC8]"
-												: "bg-[#FFF6D5] text-[#4A2D00] border border-[#1F1300]/10",
+												? "bg-[#f0a52c] text-[#FFEFC8]"
+												: "bg-[#FFF6D5] text-orange-400 border border-orange-400",
 										].join(" ")}>
 										<span className="flex items-center gap-2">
 											<Icon className="h-4 w-4" /> {item.label}
 										</span>
 
 										{solid && (
-											<span className="rounded-full bg-[#FFEFC8] text-[#1F1300] px-2 py-0.5 text-[0.6rem] font-semibold uppercase">
+											<span className="rounded-full bg-[#FFEFC8] text-orange-400 px-2 py-0.5 text-[0.6rem] font-semibold uppercase">
 												Franchise
 											</span>
 										)}
@@ -172,17 +172,17 @@ export default function Navbar() {
 							<Link
 								onClick={() => setOpen(false)}
 								href="/auth"
-								className="flex items-center justify-center rounded-xl bg-[#FFF6D5] border border-[#1F1300]/10 px-3 py-2.5 text-[#4A2D00]">
+								className="flex items-center justify-center rounded-xl bg-[#FFF6D5] border border-[#1F1300]/10 px-3 py-2.5 text-orange-400">
 								<User className="h-4 w-4" /> Login
 							</Link>
 
 							{/* CART */}
-							<div className="mt-1 flex items-center justify-between rounded-xl bg-[#FFF6D5] border border-[#1F1300]/10 px-3 py-2 text-xs text-[#4A2D00]">
+							<div className="mt-1 flex items-center justify-between rounded-xl bg-[#FFF6D5] border border-[#1F1300]/10 px-3 py-2 text-xs text-orange-400">
 								<div className="flex items-center gap-2">
 									<ShoppingBasket className="h-4 w-4" />
 									Cart
 								</div>
-								<span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#1F1300] text-[0.7rem] text-[#FFEFC8]">
+								<span className="flex h-5 w-5 items-center justify-center rounded-full bg-orange-400 text-[0.7rem] text-[#FFEFC8]">
 									0
 								</span>
 							</div>
