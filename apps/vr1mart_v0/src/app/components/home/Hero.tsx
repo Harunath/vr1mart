@@ -27,7 +27,7 @@ export default function Hero() {
 		<section
 			className="
 				relative overflow-hidden
-				bg-linear-to-br
+				bg-linear-to-b
 				from-[#FFFF41]
 				via-[#F9C80B]
 				to-[#FF6A00]
@@ -69,7 +69,7 @@ export default function Hero() {
 			</motion.div>
 
 			{/* MAIN */}
-			<div className="relative z-10 mx-auto flex max-w-6xl flex-col items-center px-4 pb-20 pt-24 md:pt-32">
+			<div className="relative z-10 mx-auto flex max-w-6xl flex-col items-center px-4 pb-20 pt-36 md:pt-48">
 				{/* HEADING */}
 				<motion.div
 					variants={fadeUp}
