@@ -39,19 +39,13 @@ export default function Navbar() {
 				initial={{ y: -40, opacity: 0 }}
 				animate={{ y: 0, opacity: 1 }}
 				transition={{ duration: 0.4, ease: "easeOut" }}
-				className="
-					w-full
-					bg-white/60
-					backdrop-filter 
-					text-[#1F1300]
-					border-b border-[#1F1300]/10
-					backdrop-blur-sm
-				">
+				style={{ backgroundImage: "var(--gradient-soft)" }}
+				className="w-full border-b border-gray-200 text-(--color-dark) backdrop-blur-md">
 				<div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3.5 md:px-6 md:py-4">
 					{/* LEFT SECTION */}
 					<div className="flex items-center gap-3">
 						<Link href="/" className="flex items-center gap-2">
-							<div className="relative h-16 w-[200px] md:h-20 md:w-[260px] -ml-3">
+							<div className="relative -ml-3 h-16 w-[200px] md:h-20 md:w-[260px]">
 								<Image
 									src="https://res.cloudinary.com/dgulr1hgd/image/upload/v1764740121/vr1mart-logo-final_mfwrro.png"
 									alt="VR1MART Logo"
@@ -64,16 +58,16 @@ export default function Navbar() {
 
 						{/* Motto */}
 						<div className="hidden flex-col leading-tight text-xs md:flex">
-							<span className="inline-flex items-center gap-1 rounded-full bg-[#FFF9C2] px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-orange-400 shadow-sm">
-								<Leaf className="h-3 w-3 text-green-600" />
+							<span className="inline-flex items-center gap-1 rounded-full bg-(--color-secondary) px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-(--color-dark) shadow-sm">
+								<Leaf className="h-3 w-3 text-(--color-success)]" />
 								From Farmers to Shelf
 							</span>
 
-							<span className="mt-1 inline-flex items-center gap-2 text-[0.75rem] text-gray-900 font-medium">
+							<span className="mt-1 inline-flex items-center gap-2 text-[0.75rem] font-medium text-gray-700">
 								<span>Fresh</span>
-								<span className="h-1 w-1 rounded-full bg-orange-400" />
+								<span className="h-1 w-1 rounded-full bg-(--color-primary)" />
 								<span>Fast</span>
-								<span className="h-1 w-1 rounded-full bg-orange-400" />
+								<span className="h-1 w-1 rounded-full bg-(--color-primary)" />
 								<span>Affordable</span>
 							</span>
 						</div>
@@ -93,14 +87,13 @@ export default function Navbar() {
 										className={[
 											"inline-flex items-center gap-2 rounded-full text-xs font-semibold transition-all",
 											isSolid
-												? "bg-orange-400 text-[#FFEFC8] px-4 py-2 shadow-md hover:bg-orange-600"
-												: "bg-[#FFF6D5] text-orange-400 border border-[#1F1300]/10 px-4 py-2 hover:bg-[#FFE58D]",
+												? "px-4 py-2 bg-(--color-accent) text-(--color-light) shadow-md hover:bg-(--color-accent-hover)"
+												: "px-4 py-2 border border-gray-300 bg-gray-100 text-(--color-dark) hover:bg-(--color-secondary)",
 										].join(" ")}>
 										<Icon className="h-4 w-4" />
 										{item.label}
-
 										{isSolid && (
-											<span className="rounded-full bg-[#FFEFC8] text-black px-2 py-0.5 text-[0.6rem] font-semibold uppercase">
+											<span className="rounded-full bg-(--color-secondary) px-2 py-0.5 text-[0.6rem] font-semibold uppercase text-(--color-dark)">
 												Franchise
 											</span>
 										)}
@@ -110,12 +103,12 @@ export default function Navbar() {
 						</div>
 
 						{/* Divider */}
-						<span className="h-5 w-px bg-gray-900/20" />
+						<span className="h-5 w-px bg-gray-300" />
 
 						{/* LOGIN */}
 						<Link
 							href="/auth"
-							className="flex items-center gap-2 rounded-full border border-gray-900/10 bg-[#FFF6D5] px-3 py-1.5 text-sm font-medium text-gray-900 hover:bg-[#FFE58D] transition">
+							className="flex items-center gap-2 rounded-full border border-gray-300 bg-gray-100 px-3 py-1.5 text-sm font-medium text-(--color-dark) transition hover:bg-(--color-primary)">
 							<User className="h-4 w-4" />
 							Login
 						</Link>
@@ -124,7 +117,7 @@ export default function Navbar() {
 					{/* MOBILE MENU BUTTON */}
 					<button
 						onClick={() => setOpen(!open)}
-						className="md:hidden flex items-center justify-center rounded-full border border-[#1F1300]/20 bg-[#FFF6D5]/80 p-1.5 text-[#4A2D00] shadow-sm">
+						className="flex items-center justify-center rounded-full border border-gray-300 bg-(--color-secondary)/90 p-1.5 text-(--color-dark) shadow-sm md:hidden">
 						{open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
 					</button>
 				</div>
@@ -138,7 +131,8 @@ export default function Navbar() {
 						animate={{ height: "auto", opacity: 1 }}
 						exit={{ height: 0, opacity: 0 }}
 						transition={{ duration: 0.25 }}
-						className="overflow-hidden bg-linear-to-br from-[#FFFF41] via-[#F9C80B] to-[#FF6A00] border-b border-orange-400 text-orange-400 shadow">
+						style={{ backgroundImage: "var(--gradient-brand)" }}
+						className="overflow-hidden border-b border-(--color-primary) text-(--color-dark) shadow">
 						<div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 pb-4 pt-2">
 							{NAV_ITEMS.map((item) => {
 								const Icon = item.icon;
@@ -152,15 +146,15 @@ export default function Navbar() {
 										className={[
 											"flex items-center justify-between rounded-xl px-3 py-2.5",
 											solid
-												? "bg-[#f0a52c] text-[#FFEFC8]"
-												: "bg-[#FFF6D5] text-orange-400 border border-orange-400",
+												? "bg-(--color-accent) text-(--color-light)"
+												: "border border-gray-300 bg-(--color-secondary) text-(--color-dark)",
 										].join(" ")}>
 										<span className="flex items-center gap-2">
 											<Icon className="h-4 w-4" /> {item.label}
 										</span>
 
 										{solid && (
-											<span className="rounded-full bg-[#FFEFC8] text-orange-400 px-2 py-0.5 text-[0.6rem] font-semibold uppercase">
+											<span className="rounded-full bg-(--color-secondary) px-2 py-0.5 text-[0.6rem] font-semibold uppercase text-(--color-dark)">
 												Franchise
 											</span>
 										)}
@@ -172,17 +166,17 @@ export default function Navbar() {
 							<Link
 								onClick={() => setOpen(false)}
 								href="/auth"
-								className="flex items-center justify-center rounded-xl bg-[#FFF6D5] border border-[#1F1300]/10 px-3 py-2.5 text-orange-400">
+								className="flex items-center justify-center rounded-xl border border-gray-300 bg-(--color-surface) px-3 py-2.5 text-(--color-dark)">
 								<User className="h-4 w-4" /> Login
 							</Link>
 
 							{/* CART */}
-							<div className="mt-1 flex items-center justify-between rounded-xl bg-[#FFF6D5] border border-[#1F1300]/10 px-3 py-2 text-xs text-orange-400">
+							<div className="mt-1 flex items-center justify-between rounded-xl border border-gray-300 bg-(--color-surface) px-3 py-2 text-xs text-(--color-dark)">
 								<div className="flex items-center gap-2">
 									<ShoppingBasket className="h-4 w-4" />
 									Cart
 								</div>
-								<span className="flex h-5 w-5 items-center justify-center rounded-full bg-orange-400 text-[0.7rem] text-[#FFEFC8]">
+								<span className="flex h-5 w-5 items-center justify-center rounded-full bg-(--color-accent) text-[0.7rem] text-(--color-light)">
 									0
 								</span>
 							</div>
