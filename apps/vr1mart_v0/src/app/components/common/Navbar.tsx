@@ -53,7 +53,7 @@ export default function Navbar() {
 						<Link href="/" className="flex items-center gap-2">
 							<div className="relative h-16 w-[200px] md:h-20 md:w-[260px] -ml-3">
 								<Image
-									src="https://res.cloudinary.com/diaoy3wzi/image/upload/v1764315364/vr1mart-logo_sample1_1_lxyspi.png"
+									src="https://res.cloudinary.com/dgulr1hgd/image/upload/v1764740121/vr1mart-logo-final_mfwrro.png"
 									alt="VR1MART Logo"
 									fill
 									className="object-contain"

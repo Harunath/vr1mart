@@ -30,7 +30,7 @@ export default function Footer() {
 							<div className="relative h-14 w-[150px] sm:h-16 sm:w-[210px]">
 								<div className="absolute inset-0 rounded-lg bg-white/30 blur-[18px]" />
 								<Image
-									src="https://res.cloudinary.com/diaoy3wzi/image/upload/v1764315364/vr1mart-logo_sample1_1_lxyspi.png"
+									src="https://res.cloudinary.com/dgulr1hgd/image/upload/v1764740121/vr1mart-logo-final_mfwrro.png"
 									alt="VR1MART Logo"
 									fill
 									className="relative object-contain"
