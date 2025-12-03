@@ -114,7 +114,7 @@ export default function Category() {
 						<p className="text-xs text-gray-800 sm:text-sm">
 							Swipe through{" "}
 							<span className="font-semibold text-(--color-success)">
-								VR<span className="text-(--color-accent)">1</span>MART
+								VR<span className="text-red-800">1</span>MART
 							</span>{" "}
 							favourites – everything your home needs, in one place.
 						</p>

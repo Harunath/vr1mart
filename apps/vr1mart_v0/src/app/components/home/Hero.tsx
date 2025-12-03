@@ -38,14 +38,14 @@ export default function Hero() {
 
 			{/* Left veg bag */}
 			<motion.div
-				className="pointer-events-none absolute bottom-60 left-[-70px] hidden md:block lg:left-[-90px]"
+				className="pointer-events-none absolute bottom-60 -left-10 hidden md:block lg:-left-10"
 				animate={{ y: [0, -10, 0], rotate: [18, 24, 18] }}
 				transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}>
 				<Image
-					src="https://res.cloudinary.com/dgulr1hgd/image/upload/v1764322423/afe145da-bd0e-402c-9e5f-3ac46abab66e_removalai_preview_cabzpl.png"
+					src="https://res.cloudinary.com/dgulr1hgd/image/upload/v1764763127/ChatGPT_Image_Dec_3_2025_05_28_29_PM_bfyqym.png"
 					alt="Fresh vegetables bag"
-					width={280}
-					height={280}
+					width={240}
+					height={240}
 					className="drop-shadow-[0_24px_60px_rgba(0,0,0,0.30)]"
 				/>
 			</motion.div>
@@ -103,7 +103,7 @@ export default function Hero() {
 						Fresh fruits, vegetables, dairy, snacks & home essentials delivered
 						from{" "}
 						<span className="font-semibold text-(--color-dark)">
-							VR<span className="text-(--color-accent)">1</span>MART
+							VR<span className="text-red-800">1</span>MART
 						</span>{" "}
 						— fast, fresh & vibrant for your everyday needs.
 					</p>
