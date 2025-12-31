@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-	title: "VR1MART – Fresh Groceries, Daily Essentials & Home Delivery",
+	title: "VR1MART",
 	description:
 		"VR1MART is your trusted one-stop shop for fresh groceries, pulses, spices, fruits, vegetables, dairy and daily essentials. Enjoy fast home delivery and store pick-up options.",
 	keywords: [
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 		"supermarket",
 	],
 	openGraph: {
-		title: "VR1MART – Fresh Groceries Delivered to Your Doorstep",
+		title: "VR1MART",
 		description:
 			"Buy fresh groceries, staples, pulses, spices, fruits, vegetables & more from VR1MART. Fast delivery & affordable prices.",
 		url: "https://vr1mart.com",

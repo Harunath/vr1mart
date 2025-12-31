@@ -138,17 +138,6 @@ export default function Footer() {
 									support@vr1mart.com
 								</a>
 							</li>
-
-							<li className="flex items-start gap-2">
-								<div className="mt-0.5 flex h-7 w-7 items-center justify-center rounded-full bg-white/75">
-									<Phone className="h-3.5 w-3.5 text-(--color-accent)" />
-								</div>
-								<a
-									href="tel:+919876543210"
-									className="underline-offset-2 hover:underline">
-									+91 98765 43210
-								</a>
-							</li>
 						</ul>
 					</div>
 				</div>
